@@ -1,0 +1,4 @@
+const test=require('node:test'),assert=require('node:assert/strict'),E=require('../engine.js');
+test('partitions block crossing except at doorways',()=>{for(const [x,y] of [[8,3],[8,10],[3,5],[7,5]])assert.equal(E.walkable('home',x,y),false);for(const [x,y] of [[8,7],[5,5]])assert.equal(E.walkable('home',x,y),true)});
+test('every interaction reachable from the entrance through real doorways',()=>{for(const o of E.objects.home){const s=E.fresh();s.x=2;s.y=10;const route=E.pathTo(s,o.x,o.y,1.25);assert.ok(route.length,o.id);for(const n of route)assert.ok(E.walkable('home',n.x,n.y),o.id)}});
+test('bedroom to kitchen and stairs round trip',()=>{const s=E.fresh();s.x=10;s.y=7;assert.ok(E.pathTo(s,3,3,1.25).length);s.x=2;s.y=10;E.interact(s,'door');assert.equal(s.scene,'stairs');s.x=1.5;s.y=1.5;E.interact(s,'homeDoor');assert.equal(s.scene,'home');assert.ok(E.walkable(s.scene,s.x,s.y))});
