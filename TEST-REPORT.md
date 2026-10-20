@@ -1,9 +1,9 @@
-# ZAMAN 0.2 — Verification
+# ZAMAN 0.3 — Verification
 
 ## Passed
 
 - JavaScript syntax validation: engine.js and game.js.
-- Twelve Node simulation tests: full door roundtrip; bread rewards and memory; complete linked mystery with night gating; year/age rollover preserving world state; JSON save roundtrip and malformed saves; collision bounds and stairwell; grid flood-fill reachability of every interactable from scene entry; friendship state persistence; rooftop adventure; tap-navigation collision routes; multi-scene quest guidance; original-save compatibility.
+- Thirteen Node simulation tests: full door roundtrip; bread rewards and memory; complete linked mystery with night gating; year/age rollover preserving world state; JSON save roundtrip and malformed saves; collision bounds and stairwell; grid flood-fill reachability of every interactable from scene entry; friendship state persistence; rooftop adventure; tap-navigation collision routes; multi-scene quest guidance; original-save compatibility.
 - Four Node mock Canvas/UI smoke tests execute each scene at night on a simulated narrow viewport. These test JavaScript execution, not browser appearance or actual device behavior.
 - Dependency-free static package: relative local asset references; no remote scripts, fonts or images.
 
@@ -21,3 +21,7 @@ The browser QA action was blocked by the environment's browser URL security poli
 6. Reload the page and continue; confirm the inventory, scene and conversations remain.
 7. Export a save, sleep four three-day holidays, and verify age/year change and persistent memories. Re-import the backup.
 8. Repeat movement, scrolling panels, portrait/landscape resize and interactions in mobile Safari and Chrome.
+
+## 0.3 checks
+
+Home interaction tests added. All four scene smoke tests now use a mock AudioContext and verify playback scheduling and mute/unmute controls. Listening quality and iPhone audio output still require real-device testing. The earlier 0.2 deployment was verified in a live desktop browser, including movement guidance and Mom dialogue.

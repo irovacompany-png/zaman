@@ -1,6 +1,6 @@
 # ZAMAN — حكاية لسه بتتكتب
 
-**IROVA · Islam Ramadan · version 0.2**
+**IROVA · Islam Ramadan · version 0.3**
 
 A playable, dependency-free Arabic isometric pixel-art life adventure set in an Egyptian neighborhood in 1998. All visuals are drawn in Canvas; no external assets, trackers, accounts, server, API keys or network calls are required.
 
@@ -25,7 +25,7 @@ Open `index.html` in a desktop browser, or serve this folder as a static website
 - Day/night tint and local night lights. One real minute = two game hours. Time pauses in menus, conversations and hidden tabs.
 - One year = 12 in-game days. Birthdays increase age; the player sprite grows up to a visual cap; some dialogue changes and a neighborhood bookshop appears after the first year. This is a compact age progression system, not a complete lifetime simulation.
 - Automatic local browser saves every five active seconds, after interactions, and on page hide. JSON export/import for backups and transfer.
-- Optional synthesized interaction sounds, off by default.
+- Synthesized ambient music, footsteps, door effects, birds and radio melody. Starts on Play; a visible note button mutes sound.
 
 ## GitHub Pages
 
@@ -34,7 +34,7 @@ Open `index.html` in a desktop browser, or serve this folder as a static website
 3. In repository **Settings → Pages**, choose **Deploy from a branch**, `main`, and `/ (root)`, then save.
 4. Open the URL shown by GitHub after deployment.
 
-No build command or dependencies are needed. All asset paths are relative, so project subdirectory hosting works. `.nojekyll` is included. This package has not been published to a GitHub account automatically.
+No build command or dependencies are needed. All asset paths are relative, so project subdirectory hosting works. `.nojekyll` is included. Live game: https://irovacompany-png.github.io/zaman/
 
 ## Source
 
@@ -79,3 +79,7 @@ This is a first playable chapter, not the finished commercial game. There is one
 - The diamond button opens a quest checklist with guidance to the next person or connecting door. Door interactions remain manual.
 - Original version-one save files remain compatible; the save key and JSON schema version are unchanged.
 - Twelve simulation tests plus four mock Canvas/UI execution tests pass. Mock tests do not verify actual browser rendering or real touch behavior.
+
+## 0.3 atmosphere preview
+
+Curtains, sunbeams, wall photos and clock, rug details, steam, shaded character animation, breakfast and plant interactions, window and radio toggles. Audio is synthesized with Web Audio, not recorded neighborhood voices. This remains an incremental prototype; it is not a realistic full-world simulation.
